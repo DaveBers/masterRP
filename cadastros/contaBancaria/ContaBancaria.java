@@ -9,6 +9,8 @@ public class ContaBancaria {
         this.numeroConta = numeroConta;
     }
 
+    public ContaBancaria() {}
+
     public void setNome(String nome) {
         this.nome = nome;
     }

@@ -3,7 +3,7 @@ package masterRP.cadastros.contaBancaria;
 import java.util.Scanner;
 
 public class ContaBancariaController {
-    public void createContaBancaria(){
+    public ContaBancaria createContaBancaria(){
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Informe o nome da conta: ");
@@ -12,15 +12,14 @@ public class ContaBancariaController {
         String numeroConta = scanner.nextLine();
 
         ContaBancaria contaBancaria = new ContaBancaria(nome,numeroConta);
-        System.out.println("Conta: " + contaBancaria.getNome());
-        System.out.println("Número: " + contaBancaria.getNumeroConta());
 
-        scanner.close();
+        return contaBancaria;
     }
 
-    public static void main(String[] args){
-        System.out.println("Criação de Conta Bancária");
-        ContaBancariaController contaBancariaController = new ContaBancariaController();
-        contaBancariaController.createContaBancaria();
+    public void contaBancariaList(ContaBancaria contaBancaria){
+        System.out.println("--------------------------------");
+        System.out.println("Nome da conta: " + contaBancaria.getNome());
+        System.out.println("Número da conta: " + contaBancaria.getNumeroConta());
+        System.out.println("--------------------------------");
     }
 }

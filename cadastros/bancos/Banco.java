@@ -9,6 +9,8 @@ public class Banco {
         this.codigo = codigo;
     }
 
+    public Banco() {}
+
     public String getCodigo() {
         return codigo;
     }
